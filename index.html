@@ -14,18 +14,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css'>
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <title>The Moon Society</title>
 
     <style>
         .borderless td, .borderless th {
             border: none;
         }
+
         .background-image {
             background-image: url(assets/images/rocket-black.gif);
             background-repeat: no-repeat;
             background-attachment: fixed;
 
         }
+
         .header-background-image {
             background-repeat: no-repeat;
             background-size: cover;
@@ -77,11 +80,222 @@
             border: 1px solid #a8489b;
             padding: 30px;
         }
-        .border{
+
+        .border {
             border-top-style: none;
             border-left-style: none;
             border-right-style: none;
             border-bottom-style: none;
+        }
+
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 3px;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            background: #413951;
+            background: linear-gradient(145deg, #413951 0%, #201c29 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#413951", endColorstr="#201c29", GradientType=0);
+            color: #fff;
+            font-family: "montserrat", Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .headline {
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .circle-big {
+            position: relative;
+            width: 114px;
+            height: 114px;
+            margin: 30px auto 25px auto;
+        }
+
+        .circle-big svg {
+            width: 114px;
+            height: 114px;
+        }
+
+        .circle-big .bg {
+            fill: none;
+            stroke-width: 10px;
+            stroke: #343035;
+        }
+
+        .circle-big .progress {
+            fill: none;
+            stroke-width: 10px;
+            stroke: #9a0fe0;
+            stroke-linecap: round;
+            stroke-dasharray: 326.56;
+            stroke-dashoffset: 60;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            -webkit-animation: big 1.5s ease-in-out;
+            animation: big 1.5s ease-in-out;
+        }
+
+        .circle-big .text {
+            position: absolute;
+            width: 100%;
+            top: 37px;
+            font-size: 24px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .circle-big .text .small {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .circles-small {
+            margin: 0 auto;
+            width: 400px;
+            height: 80px;
+            text-align: center;
+        }
+
+        .circle-small {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 20px;
+        }
+
+        .circle-small svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .circle-small .bg {
+            fill: none;
+            stroke-width: 6px;
+            stroke: #343035;
+        }
+
+        .circle-small .progress {
+            fill: none;
+            stroke-width: 6px;
+            stroke: #9a0fe0;
+            stroke-linecap: round;
+            stroke-dasharray: 232.36;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        .circle-small .progress.one {
+            stroke-dashoffset: 80;
+            -webkit-animation: one 2.5s ease-in-out, appear 1s;
+            animation: one 2.5s ease-in-out, appear 1s;
+        }
+
+        .circle-small .progress.two {
+            stroke-dashoffset: 140;
+            -webkit-animation: two 3.5s ease-in-out, appear 2s;
+            animation: two 3.5s ease-in-out, appear 2s;
+        }
+
+        .circle-small .text {
+            position: absolute;
+            width: 100%;
+            top: 26px;
+            font-size: 17px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .circle-small .text .small {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        @-webkit-keyframes big {
+            from {
+                stroke-dashoffset: 326.56;
+            }
+            to {
+                stroke-dashoffset: 60;
+            }
+        }
+
+        @keyframes big {
+            from {
+                stroke-dashoffset: 326.56;
+            }
+            to {
+                stroke-dashoffset: 60;
+            }
+        }
+
+        @-webkit-keyframes one {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 80;
+            }
+        }
+
+        @keyframes one {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 80;
+            }
+        }
+
+        @-webkit-keyframes two {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 140;
+            }
+        }
+
+        @keyframes two {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 140;
+            }
+        }
+
+        @-webkit-keyframes appear {
+            0%, 50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes appear {
+            0%, 50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -90,7 +304,8 @@
     <div class="background-image" style="margin: 0;padding: 0;">
         <div class="container pt-5 pb-5">
             <header class="mt-2 mb-5">
-                <div class="row header-background-image" style="background-image: url('assets/images/background1.png');">
+                <div class="row header-background-image"
+                     style="background-image: url('assets/images/background1.png');">
                     <div class="col-md-6">
                         <img src="assets/images/mooon-logo.png" class="img-fluid" alt="image" style="width:120px;"/>
                     </div>
@@ -109,7 +324,8 @@
                         <h2 class="mt-3 pl-3" style="font-size: 70px;font-weight: bold; color: #a661a2">Event 8</h2>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <h2 class="mt-3" style="font-size: 70px;font-weight: 900;">Airdrop <span style="color:#a8489b;font-size: 50px;">1</span></h2>
+                        <h2 class="mt-3" style="font-size: 70px;font-weight: 900;">Airdrop <span
+                                style="color:#a8489b;font-size: 50px;">1</span></h2>
                     </div>
                     <div class="col-lg-4 text-center">
                         <h3 class="mt-3 pb-2">
@@ -281,7 +497,8 @@
 
             <div class="heading mt-5 text-white text-center">
                 <div class="header-background-image" style="background-image: url('assets/images/background8.png')">
-                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2">Welcome to<br>The Moon Society</h1>
+                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2">Welcome to<br>The
+                        Moon Society</h1>
                 </div>
 
                 <br><br>
@@ -329,15 +546,18 @@
                 <div class="row mt-5">
                     <div class="col-md-6">
                         <p class="mt-3 text-center p-5">
-                            Our mission is to be the first NFT project in history, sending two holders to the space. If you have
+                            Our mission is to be the first NFT project in history, sending two holders to the space. If
+                            you have
                             a passion for space and space exploration, join our
                             outstanding community.<br>
                         </p>
 
                     </div>
                     <div class="col-md-6 text-center">
-                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center" style="background-image: url('assets/images/background3.png')">
-                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center" style="font-size: 70px;font-weight: 900; color: #a661a2">Fair Distribution</h1>
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background3.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">Fair Distribution</h1>
                         </div>
                     </div>
                 </div>
@@ -347,8 +567,10 @@
             <div class="heading mt-5 text-white text-center">
                 <div class="row mt-5">
                     <div class="col-md-6 text-center">
-                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center" style="background-image: url('assets/images/background2.png')">
-                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center" style="font-size: 70px;font-weight: 900; color: #a661a2">The Specs</h1>
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background2.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">The Specs</h1>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -369,11 +591,43 @@
             <div class="heading mt-5 text-white text-center">
                 <div class="row mt-5">
                     <div class="col-md-6">
-
+                        <div>
+                            <div class="headline">
+                            </div>
+                            <div class="circle-big">
+                                <div class="text mt-2">
+                                    30%
+                                </div>
+                                <svg>
+                                    <circle class="bg" cx="57" cy="57" r="52"></circle>
+                                    <circle class="progress" cx="57" cy="57" r="52"></circle>
+                                </svg>
+                            </div>
+                            <div class="circles-small">
+                                <div class="circle-small">
+                                    <div class="text mt-2">10%</div>
+                                    <svg>
+                                        <circle class="bg" cx="40" cy="40" r="37"></circle>
+                                        <circle class="progress one" cx="40" cy="40" r="37"></circle>
+                                    </svg>
+                                </div>
+                                <div class="circle-small">
+                                    <div class="text mt-2">
+                                        20%
+                                    </div>
+                                    <svg>
+                                        <circle class="bg" cx="40" cy="40" r="37"></circle>
+                                        <circle class="progress two" cx="40" cy="40" r="37"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6 text-center">
-                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center" style="background-image: url('assets/images/background3.png')">
-                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center" style="font-size: 70px;font-weight: 900; color: #a661a2">Roadmap activations</h1>
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background3.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">Roadmap activations</h1>
                         </div>
                     </div>
                 </div>
@@ -384,24 +638,29 @@
             <div class="heading mt-5 text-white text-center">
                 <div class="row mt-5">
                     <div class="col-md-6 text-center">
-                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center" style="background-image: url('assets/images/background5.png')">
-                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center" style="font-size: 70px;font-weight: 900; color: #a661a2">Community tools</h1>
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background5.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">Community tools</h1>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <p class="mt-3 p-5 text-left">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
                             industry's
                             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                             scrambled it to
                             make a
-                            type specimen book. It has survived not only five centuries, but also the leap into electronic
+                            type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic
                             typesetting,
                             remaining
                             essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
                             containing Lorem
                             Ipsum passages,
-                            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of Lorem
                             Ipsum.<br>
                         </p>
                     </div>
@@ -411,106 +670,110 @@
 
             <br><br><br><br><br><br><br><br>
             <div class="heading mt-5 text-white">
-                <div class="header-background-image text-center" style="background-image: url('assets/images/background8.png')">
-                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2"><br>Our Team</h1>
+                <div class="header-background-image text-center"
+                     style="background-image: url('assets/images/background8.png')">
+                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2"><br>Our Team
+                    </h1>
                 </div>
                 <div class="row mt-5">
-                <div class="col-md-6">
-                    <table class="table mt-3 borderless">
-                        <h3 class="mt-5" style="font-weight: bold; font-size: 40px">FOUNDERS:</h3>
-                        <tbody>
-                        <tr>
-                            <td>WoodenHound</td>
-                            <td>-</td>
-                            <td>Digital Allrounder</td>
-                        </tr>
-                        <tr>
-                            <td>0xm00nb0i</td>
-                            <td>-</td>
-                            <td>Fundemental Analyst</td>
-                        </tr>
-                        <tr>
-                            <td>DanBzl</td>
-                            <td>-</td>
-                            <td>Lead Developer</td>
-                        </tr>
-                        <tr>
-                            <td>DatCrypt</td>
-                            <td>-</td>
-                            <td>Developer</td>
-                        </tr>
-                        <tr>
-                            <td>0xAntiLemming</td>
-                            <td>-</td>
-                            <td>Developer</td>
-                        </tr>
-                        <tr>
-                            <td>VanDeRex</td>
-                            <td>-</td>
-                            <td>Marketing</td>
-                        </tr>
-                        <tr>
-                            <td> Mr.DeForět </td>
-                            <td>-</td>
-                            <td>Marketing</td>
-                        </tr>
-                        <tr>
-                            <td> Atika </td>
-                            <td>-</td>
-                            <td>Marketing</td>
-                        </tr>
-                        <tr>
-                            <td> MadApe </td>
-                            <td>-</td>
-                            <td>Design</td>
-                        </tr>
-                        <tr>
-                            <td> Supernova </td>
-                            <td>-</td>
-                            <td>Operations Manager</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-6">
-                    <table class="table mt-3 borderless">
-                        <h3 class="mt-5" style="font-weight: bold; font-size: 40px">OPERATIVE:</h3>
-                        <tbody>
-                        <tr>
-                            <td>WoodenHound</td>
-                        </tr>
-                        <tr>
-                            <td>Supernova</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table class="table mt-3 borderless">
-                        <h3 class="mt-5" style="font-weight: bold; font-size: 40px">CREW MEMBERS:</h3>
-                        <tbody>
-                        <tr>
-                            <td>Oleksandra</td>
-                            <td>-</td>
-                            <td>Design</td>
-                        </tr>
-                        <tr>
-                            <td>Andrey</td>
-                            <td>-</td>
-                            <td>Develepment</td>
-                        </tr>
-                        <tr>
-                            <td>Eugene</td>
-                            <td>-</td>
-                            <td>Operative</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    <div class="col-md-6">
+                        <table class="table mt-3 borderless">
+                            <h3 class="mt-5" style="font-weight: bold; font-size: 40px">FOUNDERS:</h3>
+                            <tbody>
+                            <tr>
+                                <td>WoodenHound</td>
+                                <td>-</td>
+                                <td>Digital Allrounder</td>
+                            </tr>
+                            <tr>
+                                <td>0xm00nb0i</td>
+                                <td>-</td>
+                                <td>Fundemental Analyst</td>
+                            </tr>
+                            <tr>
+                                <td>DanBzl</td>
+                                <td>-</td>
+                                <td>Lead Developer</td>
+                            </tr>
+                            <tr>
+                                <td>DatCrypt</td>
+                                <td>-</td>
+                                <td>Developer</td>
+                            </tr>
+                            <tr>
+                                <td>0xAntiLemming</td>
+                                <td>-</td>
+                                <td>Developer</td>
+                            </tr>
+                            <tr>
+                                <td>VanDeRex</td>
+                                <td>-</td>
+                                <td>Marketing</td>
+                            </tr>
+                            <tr>
+                                <td> Mr.DeForět</td>
+                                <td>-</td>
+                                <td>Marketing</td>
+                            </tr>
+                            <tr>
+                                <td> Atika</td>
+                                <td>-</td>
+                                <td>Marketing</td>
+                            </tr>
+                            <tr>
+                                <td> MadApe</td>
+                                <td>-</td>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td> Supernova</td>
+                                <td>-</td>
+                                <td>Operations Manager</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table mt-3 borderless">
+                            <h3 class="mt-5" style="font-weight: bold; font-size: 40px">OPERATIVE:</h3>
+                            <tbody>
+                            <tr>
+                                <td>WoodenHound</td>
+                            </tr>
+                            <tr>
+                                <td>Supernova</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table mt-3 borderless">
+                            <h3 class="mt-5" style="font-weight: bold; font-size: 40px">CREW MEMBERS:</h3>
+                            <tbody>
+                            <tr>
+                                <td>Oleksandra</td>
+                                <td>-</td>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td>Andrey</td>
+                                <td>-</td>
+                                <td>Develepment</td>
+                            </tr>
+                            <tr>
+                                <td>Eugene</td>
+                                <td>-</td>
+                                <td>Operative</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
             </div>
             <br><br><br><br><br><br><br><br>
-            <div class="header-background-image text-center" style="background-image: url('assets/images/background8.png')">
-                <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2"><br>VERIFIED SMART CONTRACT</h1>
+            <div class="header-background-image text-center"
+                 style="background-image: url('assets/images/background8.png')">
+                <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2"><br>VERIFIED SMART
+                    CONTRACT</h1>
             </div>
 
             <footer class="mt-5 pt-5 big-font">
