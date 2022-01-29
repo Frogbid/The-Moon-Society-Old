@@ -118,7 +118,33 @@ h2 {
 .circle-big .progress {
     fill: none;
     stroke-width: 10px;
-    stroke: #9a0fe0;
+    stroke: #5d878c;
+    stroke-linecap: round;
+    stroke-dasharray: 326.56;
+    stroke-dashoffset: 60;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    -webkit-animation: big 1.5s ease-in-out;
+    animation: big 1.5s ease-in-out;
+}
+
+.circle-big .progress1 {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #A661A2FF;
+    stroke-linecap: round;
+    stroke-dasharray: 326.56;
+    stroke-dashoffset: 60;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    -webkit-animation: big 1.5s ease-in-out;
+    animation: big 1.5s ease-in-out;
+}
+
+.circle-big .progress2 {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #DBA9CCFF;
     stroke-linecap: round;
     stroke-dasharray: 326.56;
     stroke-dashoffset: 60;

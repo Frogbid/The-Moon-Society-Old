@@ -37,10 +37,10 @@ body {
     padding: 1em 2em 1em 0;
     row-gap: 0.5em;
     column-gap: 2em;
-    box-shadow: 0.5em 0.5em 1em rgb(0 0 0), inset 0.05em 0.05em rgb(50 50 50);
+    box-shadow: 0.5em 0.5em 1em rgb(0 0 0), inset 0.05em 0.05em rgb(112 59 109);
     counter-increment: ol-cards-counter -1;
     text-align: left;
-    background-color: var(--ol-cards-color-bg);
+    background-color: #242124;
 }
 
 .ol-cards.alternate li:nth-child(even) {
