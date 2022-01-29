@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css'>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <title>The Moon Society</title>
+
+    <style>
+        .borderless td, .borderless th {
+            border: none;
+        }
+
+        .background-image {
+            background-image: url(assets/images/rocket-black.gif);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        .header-background-image {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @font-face {
+            font-family: CustomBigFont;
+            src: url("assets/font/big.woff2");
+        }
+
+        @font-face {
+            font-family: CustomSmallFont;
+            src: url("assets/font/small.woff2");
+        }
+
+        .col-lg-4, .col-lg-8, .big-font, h1, h2 {
+            font-family: CustomBigFont;
+        }
+
+        p, h3, td {
+            font-family: CustomSmallFont;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, .3);
+            border: 2px solid #dba9cc;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .custom-button {
+            font-family: CustomBigFont;
+            font-size: 25px;
+            font-weight: bold;
+            background: #a661a2;
+            border: 1px solid #a661a2;
+            padding: 30px;
+        }
+
+        .custom-button:hover {
+            font-family: CustomBigFont;
+            font-size: 25px;
+            font-weight: bold;
+            background: #a8489b;
+            border: 1px solid #a8489b;
+            padding: 30px;
+        }
+
+        .border {
+            border-top-style: none;
+            border-left-style: none;
+            border-right-style: none;
+            border-bottom-style: none;
+        }
+
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 3px;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            background: #413951;
+            background: linear-gradient(145deg, #413951 0%, #201c29 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#413951", endColorstr="#201c29", GradientType=0);
+            color: #fff;
+            font-family: "montserrat", Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .headline {
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .circle-big {
+            position: relative;
+            width: 114px;
+            height: 114px;
+            margin: 30px auto 25px auto;
+        }
+
+        .circle-big svg {
+            width: 114px;
+            height: 114px;
+        }
+
+        .circle-big .bg {
+            fill: none;
+            stroke-width: 10px;
+            stroke: #343035;
+        }
+
+        .circle-big .progress {
+            fill: none;
+            stroke-width: 10px;
+            stroke: #9a0fe0;
+            stroke-linecap: round;
+            stroke-dasharray: 326.56;
+            stroke-dashoffset: 60;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            -webkit-animation: big 1.5s ease-in-out;
+            animation: big 1.5s ease-in-out;
+        }
+
+        .circle-big .text {
+            position: absolute;
+            width: 100%;
+            top: 37px;
+            font-size: 24px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .circle-big .text .small {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .circles-small {
+            margin: 0 auto;
+            width: 400px;
+            height: 80px;
+            text-align: center;
+        }
+
+        .circle-small {
+            display: inline-block;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 20px;
+        }
+
+        .circle-small svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .circle-small .bg {
+            fill: none;
+            stroke-width: 6px;
+            stroke: #343035;
+        }
+
+        .circle-small .progress {
+            fill: none;
+            stroke-width: 6px;
+            stroke: #9a0fe0;
+            stroke-linecap: round;
+            stroke-dasharray: 232.36;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        .circle-small .progress.one {
+            stroke-dashoffset: 80;
+            -webkit-animation: one 2.5s ease-in-out, appear 1s;
+            animation: one 2.5s ease-in-out, appear 1s;
+        }
+
+        .circle-small .progress.two {
+            stroke-dashoffset: 140;
+            -webkit-animation: two 3.5s ease-in-out, appear 2s;
+            animation: two 3.5s ease-in-out, appear 2s;
+        }
+
+        .circle-small .text {
+            position: absolute;
+            width: 100%;
+            top: 26px;
+            font-size: 17px;
+            text-align: center;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .circle-small .text .small {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        @-webkit-keyframes big {
+            from {
+                stroke-dashoffset: 326.56;
+            }
+            to {
+                stroke-dashoffset: 60;
+            }
+        }
+
+        @keyframes big {
+            from {
+                stroke-dashoffset: 326.56;
+            }
+            to {
+                stroke-dashoffset: 60;
+            }
+        }
+
+        @-webkit-keyframes one {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 80;
+            }
+        }
+
+        @keyframes one {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 80;
+            }
+        }
+
+        @-webkit-keyframes two {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 140;
+            }
+        }
+
+        @keyframes two {
+            from {
+                stroke-dashoffset: 232.36;
+            }
+            to {
+                stroke-dashoffset: 140;
+            }
+        }
+
+        @-webkit-keyframes appear {
+            0%, 50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes appear {
+            0%, 50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body style="padding: 0;margin: 0;">
+<div style="background: #0c0d08;margin: 0;padding: 0;">
+    <div class="background-image" style="margin: 0;padding: 0;">
+        <div class="container pt-5 pb-5">
+            <header class="mt-2 mb-5">
+                <div class="row header-background-image"
+                     style="background-image: url('assets/images/background8.png');">
+                    <div class="col-md-6">
+                        <img src="assets/images/mooon-logo.png" class="img-fluid" alt="image" style="width:120px;"/>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <p class="mt-5">
+                            <i class="fab fa-discord fa-2x text-white"></i>
+                            <i class="fas fa-file-download fa-2x ml-4 text-white"></i>
+                            <i class="fab fa-apple fa-2x ml-4 text-white"></i>
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <div class="heading mt-5 text-white text-center">
+                <div class="header-background-image" style="background-image: url('assets/images/background8.png')">
+                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2">Welcome to<br>The
+                        Moon Society</h1>
+                </div>
+
+                <br><br>
+                <p class="mt-3">
+                    Our vision is to establish a strong NFT community,
+                    coming together to create unique projects. Within
+                    this community, we will enable two holders a ride of
+                    their life, providing two real life space flight tickets.<br>
+
+                </p>
+            </div>
+<br><br><br><br><br><br><br><br><br><br>
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-3 pl-3" style="font-size: 70px;font-weight: bold; color: #dba9cc">Event 8</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-3" style="font-size: 70px;font-weight: 900;">Airdrop 1</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-4 pb-4">
+                            <i style="color: #a8489b" class="fas fa-lock fa-3x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 7</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">77</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 6</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">153</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 5</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">306</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 4</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">612</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 3</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">1223</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 2</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">2446</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2 class="mt-5 pt-5 pl-3" style="font-size: 70px;font-weight: bold;">Event 1</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h2 class="mt-5 pt-5" style="font-size: 70px;font-weight: 900;">Airdrop</h2>
+                        <h2 class="mt-4"><span style="color:#fcab13;font-size: 50px;">4997</span></h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5 pb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="mt-5 pt-5 mb-5 pb-5 ml-3" style="font-size: 70px;font-weight: bold">Launch</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5">
+                            <i style="color: #d8c679" class="fas fa-lock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-5">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="mt-5 pt-5 mb-5 pb-5 ml-3" style="font-size: 70px;font-weight: bold">STORY INTRO</h2>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h3 class="mt-5 pt-5 mb-5">
+                            <i style="color: #d8c679" class="fas fa-unlock fa-5x"></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-section pt-5 pb-5">
+                <div class="row">
+                    <div class="col-md-6 text-center mt-2">
+                        <button type="button" class="btn btn-primary btn-lg custom-button"><br>Members Only<br><br>
+                        </button>
+                    </div>
+                    <div class="col-md-6 text-center mt-2">
+                        <button type="button" class="btn btn-primary btn-lg custom-button">I want<br>to become a<br>member
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br>
+
+            <div class="heading mt-5 text-white text-center">
+                <div class="header-background-image" style="background-image: url('assets/images/background8.png')">
+                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2">Welcome to<br>The
+                        Moon Society</h1>
+                </div>
+
+                <br><br>
+                <p class="mt-3">
+                    Our vision is to establish a strong NFT community,
+                    coming together to create unique projects. Within
+                    this community, we will enable two holders a ride of
+                    their life, providing two real life space flight tickets.<br>
+
+                </p>
+            </div>
+
+            <div class="row gallery mt-5">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="https://picsum.photos/940/650?random=1">
+                        <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=1"
+                                     alt="Random Image"></figure>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="https://picsum.photos/940/650?random=2">
+                        <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=2"
+                                     alt="Random Image"></figure>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="https://picsum.photos/940/650?random=3">
+                        <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=3"
+                                     alt="Random Image"></figure>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a href="https://picsum.photos/940/650?random=4">
+                        <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=4"
+                                     alt="Random Image"></figure>
+                    </a>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br><br>
+            <div class="heading mt-5 text-white text-center">
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <p class="mt-3 text-center p-5">
+                            Our mission is to be the first NFT project in history, sending two holders to the space. If
+                            you have
+                            a passion for space and space exploration, join our
+                            outstanding community.<br>
+                        </p>
+
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background3.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">Fair Distribution</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br><br>
+            <div class="heading mt-5 text-white text-center">
+                <div class="row mt-5">
+                    <div class="col-md-6 text-center">
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background2.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">The Specs</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mt-3 p-5 text-left">
+                            Imagine a world, in which individuals with an ounce of
+                            creativity can explore their wildest dreams and break
+                            through their own boundaries by going to the space.<br>
+                            That’s the intention of this project:
+                            Benefit all holders and enable them to do exactly this,
+                            what was believed as impossible.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br><br>
+
+            <div class="heading mt-5 text-white text-center">
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div>
+                            <div class="headline">
+                            </div>
+                            <div class="circle-big">
+                                <div class="text mt-2">
+                                    30%
+                                </div>
+                                <svg>
+                                    <circle class="bg" cx="57" cy="57" r="52"></circle>
+                                    <circle class="progress" cx="57" cy="57" r="52"></circle>
+                                </svg>
+                            </div>
+                            <div class="circles-small">
+                                <div class="circle-small">
+                                    <div class="text mt-2">20%</div>
+                                    <svg>
+                                        <circle class="bg" cx="40" cy="40" r="37"></circle>
+                                        <circle class="progress one" cx="40" cy="40" r="37"></circle>
+                                    </svg>
+                                </div>
+                                <div class="circle-small">
+                                    <div class="text mt-2">
+                                        10%
+                                    </div>
+                                    <svg>
+                                        <circle class="bg" cx="40" cy="40" r="37"></circle>
+                                        <circle class="progress two" cx="40" cy="40" r="37"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background3.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">Roadmap activations</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br><br>
+
+            <div class="heading mt-5 text-white text-center">
+                <div class="row mt-5">
+                    <div class="col-md-6 text-center">
+                        <div class="header-background-image h-100 d-flex justify-content-center align-items-center"
+                             style="background-image: url('assets/images/background5.png')">
+                            <h1 class="pt-3 pb-3 mt-5 my-5 text-center"
+                                style="font-size: 70px;font-weight: 900; color: #a661a2">Community tools</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mt-3 p-5 text-left">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's
+                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it to
+                            make a
+                            type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic
+                            typesetting,
+                            remaining
+                            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                            containing Lorem
+                            Ipsum passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of Lorem
+                            Ipsum.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <br><br><br><br><br><br><br><br>
+            <div class="heading mt-5 text-white">
+                <div class="header-background-image text-center"
+                     style="background-image: url('assets/images/background8.png')">
+                    <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2"><br>Our Team
+                    </h1>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <table class="table mt-3 borderless">
+                            <h3 class="mt-5" style="font-weight: bold; font-size: 40px">FOUNDERS:</h3>
+                            <tbody>
+                            <tr>
+                                <td>WoodenHound</td>
+                                <td>-</td>
+                                <td>Digital Allrounder</td>
+                            </tr>
+                            <tr>
+                                <td>0xm00nb0i</td>
+                                <td>-</td>
+                                <td>Fundemental Analyst</td>
+                            </tr>
+                            <tr>
+                                <td>DanBzl</td>
+                                <td>-</td>
+                                <td>Lead Developer</td>
+                            </tr>
+                            <tr>
+                                <td>DatCrypt</td>
+                                <td>-</td>
+                                <td>Developer</td>
+                            </tr>
+                            <tr>
+                                <td>0xAntiLemming</td>
+                                <td>-</td>
+                                <td>Developer</td>
+                            </tr>
+                            <tr>
+                                <td>VanDeRex</td>
+                                <td>-</td>
+                                <td>Marketing</td>
+                            </tr>
+                            <tr>
+                                <td> Mr.DeForět</td>
+                                <td>-</td>
+                                <td>Marketing</td>
+                            </tr>
+                            <tr>
+                                <td> Atika</td>
+                                <td>-</td>
+                                <td>Marketing</td>
+                            </tr>
+                            <tr>
+                                <td> MadApe</td>
+                                <td>-</td>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td> Supernova</td>
+                                <td>-</td>
+                                <td>Operations Manager</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table mt-3 borderless">
+                            <h3 class="mt-5" style="font-weight: bold; font-size: 40px">OPERATIVE:</h3>
+                            <tbody>
+                            <tr>
+                                <td>WoodenHound</td>
+                            </tr>
+                            <tr>
+                                <td>Supernova</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table mt-3 borderless">
+                            <h3 class="mt-5" style="font-weight: bold; font-size: 40px">CREW MEMBERS:</h3>
+                            <tbody>
+                            <tr>
+                                <td>Oleksandra</td>
+                                <td>-</td>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td>Andrey</td>
+                                <td>-</td>
+                                <td>Develepment</td>
+                            </tr>
+                            <tr>
+                                <td>Eugene</td>
+                                <td>-</td>
+                                <td>Operative</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br><br><br><br><br><br>
+            <div class="header-background-image text-center"
+                 style="background-image: url('assets/images/background8.png')">
+                <h1 class="pt-3 pb-3 mt-5" style="font-size: 70px;font-weight: 900; color: #a661a2"><br>VERIFIED SMART
+                    CONTRACT</h1>
+            </div>
+
+            <footer class="mt-5 pt-5 big-font">
+                <div class="row text-center text-white">
+                    <div class="col-4">
+                        LGL NTC
+                    </div>
+                    <div class="col-4">
+                        TRMS & CNDTNS
+                    </div>
+                    <div class="col-4">
+                        PRVCY PL
+                    </div>
+                    <div class="col-12 mt-5">
+                        © 2022 BY 10CT | All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
