@@ -197,16 +197,16 @@ a, a:hover {
 }
 /* COLORS */
 .postcard .postcard__tagbox .green.play:hover {
-	background: #79dd09;
+	background: #A661A2FF;
 	color: black;
 }
 
 .green .postcard__title:hover {
-	color: #79dd09;
+	color: #A661A2FF;
 }
 
 .green .postcard__bar {
-	background-color: #79dd09;
+	background-color: #A661A2FF;
 }
 
 .green::before {
@@ -218,15 +218,15 @@ a, a:hover {
 }
 
 .postcard .postcard__tagbox .blue.play:hover {
-	background: #0076bd;
+	background: #dba9cc;
 }
 
 .blue .postcard__title:hover {
-	color: #0076bd;
+	color: #dba9cc;
 }
 
 .blue .postcard__bar {
-	background-color: #0076bd;
+	background-color: #dba9cc;
 }
 
 .blue::before {
@@ -238,15 +238,15 @@ a, a:hover {
 }
 
 .postcard .postcard__tagbox .red.play:hover {
-	background: #bd150b;
+	background: #5D878CFF;
 }
 
 .red .postcard__title:hover {
-	color: #bd150b;
+	color: #5D878CFF;
 }
 
 .red .postcard__bar {
-	background-color: #bd150b;
+	background-color: #5D878CFF;
 }
 
 .red::before {
@@ -258,16 +258,16 @@ a, a:hover {
 }
 
 .postcard .postcard__tagbox .yellow.play:hover {
-	background: #bdbb49;
+	background: #5D878CFF;
 	color: black;
 }
 
 .yellow .postcard__title:hover {
-	color: #bdbb49;
+	color: #5D878CFF;
 }
 
 .yellow .postcard__bar {
-	background-color: #bdbb49;
+	background-color: #5D878CFF;
 }
 
 .yellow::before {
