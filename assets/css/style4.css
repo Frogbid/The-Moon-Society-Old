@@ -56,8 +56,8 @@ h2 {
     font-family: CustomBigFont;
     font-size: 25px;
     font-weight: bold;
-    background: #a8489b;
-    border: 1px solid #a8489b;
+    background: #f721f8;
+    border: 1px solid #973698;
     padding: 30px;
 }
 
@@ -118,7 +118,7 @@ h2 {
 .circle-big .progress {
     fill: none;
     stroke-width: 10px;
-    stroke: #5d878c;
+    stroke: #f721f8;
     stroke-linecap: round;
     stroke-dasharray: 326.56;
     stroke-dashoffset: 60;
@@ -131,7 +131,7 @@ h2 {
 .circle-big .progress1 {
     fill: none;
     stroke-width: 10px;
-    stroke: #A661A2FF;
+    stroke: #f721f8;
     stroke-linecap: round;
     stroke-dasharray: 326.56;
     stroke-dashoffset: 60;
@@ -198,7 +198,7 @@ h2 {
 .circle-small .progress {
     fill: none;
     stroke-width: 6px;
-    stroke: #9a0fe0;
+    stroke: #f721f8;
     stroke-linecap: round;
     stroke-dasharray: 232.36;
     transform: rotate(-90deg);

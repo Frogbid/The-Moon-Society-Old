@@ -218,15 +218,15 @@ a, a:hover {
 }
 
 .postcard .postcard__tagbox .blue.play:hover {
-	background: #dba9cc;
+	background: #f721f8;
 }
 
 .blue .postcard__title:hover {
-	color: #dba9cc;
+	color: #f721f8;
 }
 
 .blue .postcard__bar {
-	background-color: #dba9cc;
+	background-color: #f721f8;
 }
 
 .blue::before {
