@@ -6,11 +6,14 @@ body {
 	color: #ffffff;
 	text-rendering: optimizeLegibility;
 	font-weight: initial;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('../images/ms.png');
+	height: 100%;
 }
 
-.dark {
-	background: #110f16;
-}
+
 
 .light {
 	background: #f3f5f7;
