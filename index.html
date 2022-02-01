@@ -48,16 +48,10 @@
                     <div class="col-md-6 text-center mt-2 pb-3">
                         <i class="fa fa-angle-double-up fa-6x mb-3" onclick="displayUp();"
                            onMouseOver="this.style.color='#a661a2'" onMouseOut="this.style.color='white'"></i>
-                        <br>
-                        <button type="button" class="btn btn-primary btn-lg custom-button" onclick="displayUp();"><br>Members
-                            Only<br><br>
-                        </button>
+                        <div class="shadow"> <h2 class="buttonText">Members Only</h2></div>
                     </div>
                     <div class="col-md-6 text-center mt-2 pb-3">
-                        <button type="button" class="btn btn-primary btn-lg custom-button" onclick="displayDown();">I
-                            want<br>to become a<br>member
-                        </button>
-                        <br>
+                        <div class="shadow mb-4"> <h2 class="buttonText">I want to become a member</h2></div>
                         <i class="fa fa-angle-double-down fa-6x mt-3" onclick="displayDown();"
                            onMouseOver="this.style.color='#a661a2'" onMouseOut="this.style.color='white'"></i>
                     </div>
@@ -169,14 +163,10 @@
             <div class="button-section">
                 <div class="row mb-4">
                     <div class="col-md-6 text-center">
-                        <button type="button" class="btn btn-primary btn-lg custom-button" onclick="displayUp();"><br>Members
-                            Only<br><br>
-                        </button>
+                        <div class="shadow"> <h2 class="buttonText">Members Only</h2></div>
                     </div>
                     <div class="col-md-6 text-center">
-                        <button type="button" class="btn btn-primary btn-lg custom-button" onclick="displayDown();">I
-                            want<br>to become a<br>member
-                        </button>
+                        <div class="shadow mb-4"> <h2 class="buttonText">I want to become a member</h2></div>
                     </div>
                 </div>
             </div>
@@ -650,11 +640,15 @@
         if (event.originalEvent.wheelDelta >= 0 && c == 0) {
             document.getElementById("first_intro").style.display = "none";
             document.getElementById("event").style.display = "block";
+            document.getElementById("moon").style.display = "block";
+            window.location.href="index.html#event";
             c = 1;
         } else {
             if (c == 0) {
                 document.getElementById("first_intro").style.display = "none";
+                document.getElementById("event").style.display = "block";
                 document.getElementById("moon").style.display = "block";
+                window.location.href="index.html#moon";
                 c = 1;
             }
         }
