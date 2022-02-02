@@ -46,13 +46,13 @@
             <div class="button-section pt-5 pb-5 mt-5 mb-5">
                 <div class="row pt-5 pb-4">
                     <div class="col-md-6 text-center mt-2 pb-3">
-                        <i class="fa fa-angle-double-up fa-6x mb-3" onclick="displayUp();"
+                        <i class="fa fa-angle-double-up fa-3x mb-3" onclick="displayUp();"
                            onMouseOver="this.style.color='#a661a2'" onMouseOut="this.style.color='white'"></i>
-                        <div class="shadow"> <h2 class="buttonText">Members Only</h2></div>
+                        <div class=""> <h2 class="buttonText">ASTRONAUTS<br> <span style="font-size: 20px">Please Scrool Up</span></h2></div>
                     </div>
                     <div class="col-md-6 text-center mt-2 pb-3">
-                        <div class="shadow mb-4"> <h2 class="buttonText">I want to become a member</h2></div>
-                        <i class="fa fa-angle-double-down fa-6x mt-3" onclick="displayDown();"
+                        <div class="mb-4"> <h2 class="buttonText">NEW RECRUITS <br> <span style="font-size: 20px">Please Scrool Down</span></h2></div>
+                        <i class="fa fa-angle-double-down fa-3x mt-3" onclick="displayDown();"
                            onMouseOver="this.style.color='#a661a2'" onMouseOut="this.style.color='white'"></i>
                     </div>
                 </div>
@@ -163,10 +163,10 @@
             <div class="button-section">
                 <div class="row mb-4">
                     <div class="col-md-6 text-center">
-                        <div class="shadow"> <h2 class="buttonText">Members Only</h2></div>
+                        <div class=""> <h2 class="buttonText mt-5">Members Only</h2></div>
                     </div>
                     <div class="col-md-6 text-center">
-                        <div class="shadow mb-4"> <h2 class="buttonText">I want to become a member</h2></div>
+                        <div class="mb-4"> <h2 class="buttonText">I want to become a member</h2></div>
                     </div>
                 </div>
             </div>
@@ -653,16 +653,6 @@
             }
         }
     });
-
-    function displayUp() {
-        document.getElementById("first_intro").style.display = "none";
-        document.getElementById("event").style.display = "block";
-    }
-
-    function displayDown() {
-        document.getElementById("first_intro").style.display = "none";
-        document.getElementById("moon").style.display = "block";
-    }
 </script>
 </body>
 </html>
