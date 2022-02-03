@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="assets/css/style3.css">
     <link rel="stylesheet" href="assets/css/style4.css">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
+
         @font-face {
             font-family: CustomBigFont;
             src: url("assets/font/big.woff2");
@@ -31,7 +32,8 @@
         p, h3, td {
             font-family: CustomSmallFont;
         }
-        .custom-moon{
+
+        .custom-moon {
             margin-top: -15px;
             background-image: url("assets/images/moon_1.png");
             background-repeat: no-repeat;
@@ -48,10 +50,12 @@
                     <div class="col-md-6 text-center mt-2 pb-3">
                         <i class="fa fa-angle-double-up fa-3x mb-3" onclick="displayUp();"
                            onMouseOver="this.style.color='#a661a2'" onMouseOut="this.style.color='white'"></i>
-                        <div class=""> <h2 class="buttonText">ASTRONAUTS<br> <span style="font-size: 20px">Please Scrool Up</span></h2></div>
+                        <div class=""><h2 class="buttonText">ASTRONAUTS<br> <span style="font-size: 20px">Please Scrool Up</span>
+                        </h2></div>
                     </div>
                     <div class="col-md-6 text-center mt-2 pb-3">
-                        <div class="mb-4"> <h2 class="buttonText">NEW RECRUITS <br> <span style="font-size: 20px">Please Scrool Down</span></h2></div>
+                        <div class="mb-4"><h2 class="buttonText">NEW RECRUITS <br> <span style="font-size: 20px">Please Scrool Down</span>
+                        </h2></div>
                         <i class="fa fa-angle-double-down fa-3x mt-3" onclick="displayDown();"
                            onMouseOver="this.style.color='#a661a2'" onMouseOut="this.style.color='white'"></i>
                     </div>
@@ -115,7 +119,7 @@
                         <span class="pl-5" style="font-size:50px;">Airdrop 306</span>
                     </div>
                 </li>
-                <li style="--ol-cards-color-accent:#F721F8">
+                <li style="--ol-cards-color-accent:#F721F8" id="event4">
                     <div class="step"><i class="fas fa-lock"></i></div>
                     <div class="title"></div>
                     <div class="content">
@@ -158,18 +162,17 @@
                     </div>
                 </li>
             </ol>
-        </div>
-        <div class="container">
-            <div class="button-section">
+
+            <!--<div class="button-section">
                 <div class="row mb-4">
                     <div class="col-md-6 text-center">
-                        <div class=""> <h2 class="buttonText mt-5">Members Only</h2></div>
+                        <div class=""><h2 class="buttonText mt-5">Members Only</h2></div>
                     </div>
                     <div class="col-md-6 text-center">
-                        <div class="mb-4"> <h2 class="buttonText">I want to become a member</h2></div>
+                        <div class="mb-4"><h2 class="buttonText">I want to become a member</h2></div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
     <!--event section ends-->
@@ -635,24 +638,28 @@
 
 
 <script>
-    var c = 0;
-    $(window).bind('mousewheel', function (event) {
-        if (event.originalEvent.wheelDelta >= 0 && c == 0) {
-            document.getElementById("first_intro").style.display = "none";
-            document.getElementById("event").style.display = "block";
-            document.getElementById("moon").style.display = "block";
-            window.location.href="index.html#event";
-            c = 1;
-        } else {
-            if (c == 0) {
+    var c = 0, x = 0;
+    if (x == 0) {
+        $(window).bind('mousewheel', function (event) {
+            if (event.originalEvent.wheelDelta >= 0 && c == 0) {
                 document.getElementById("first_intro").style.display = "none";
                 document.getElementById("event").style.display = "block";
                 document.getElementById("moon").style.display = "block";
-                window.location.href="index.html#moon";
+                window.location.href = "index.html#event4";
                 c = 1;
+                x = 1;
+            } else {
+                if (c == 0) {
+                    document.getElementById("first_intro").style.display = "none";
+                    document.getElementById("event").style.display = "block";
+                    document.getElementById("moon").style.display = "block";
+                    window.location.href = "index.html#moon";
+                    c = 1;
+                    x = 1;
+                }
             }
-        }
-    });
+        });
+    }
 </script>
 </body>
 </html>
